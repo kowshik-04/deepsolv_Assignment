@@ -146,8 +146,6 @@ Import postman/LinkedIn-Insights.postman_collection.json. Base URL defaults to h
 | Async programming | Completed |
 | Cloud storage | Architected |
 | Docker | Completed |
-| Frontend | Not included (optional) |
-| Deployment | Not required |
 
 ## Author
 Rama Naga Kowshik Mente — Backend / AI Engineer
