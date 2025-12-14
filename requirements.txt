@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+motor
+redis
+python-dotenv
+httpx
+openai
+pydantic
+pydantic-settings
+pytest
+pytest-asyncio
+beautifulsoup4

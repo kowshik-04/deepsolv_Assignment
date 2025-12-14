@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "LinkedIn Insights",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for LinkedIn Insights API"
+  },
+  "item": [
+    {
+      "name": "Get or Scrape Page",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/pages/{{page_id}}"
+      }
+    },
+    {
+      "name": "Search Pages",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/pages/search?industry={{industry}}&name={{name}}&min_followers={{min_followers}}&max_followers={{max_followers}}&page={{page}}&limit={{limit}}",
+          "host": ["{{base_url}}"],
+          "path": ["api", "pages", "search"],
+          "query": [
+            {"key": "industry", "value": "{{industry}}"},
+            {"key": "name", "value": "{{name}}"},
+            {"key": "min_followers", "value": "{{min_followers}}"},
+            {"key": "max_followers", "value": "{{max_followers}}"},
+            {"key": "page", "value": "{{page}}"},
+            {"key": "limit", "value": "{{limit}}"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Posts",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/pages/{{page_id}}/posts?page={{page}}&limit={{limit}}"
+      }
+    },
+    {
+      "name": "Employees",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/pages/{{page_id}}/employees?page={{page}}&limit={{limit}}"
+      }
+    },
+    {
+      "name": "Comments",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/pages/{{page_id}}/comments?post_id={{post_id}}&page={{page}}&limit={{limit}}"
+      }
+    },
+    {
+      "name": "Followers",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/pages/{{page_id}}/followers?page={{page}}&limit={{limit}}"
+      }
+    },
+    {
+      "name": "Following",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/pages/{{page_id}}/following?page={{page}}&limit={{limit}}"
+      }
+    },
+    {
+      "name": "AI Insights",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/pages/{{page_id}}/ai-insights"
+      }
+    }
+  ],
+  "variable": [
+    {"key": "base_url", "value": "http://localhost:8000"},
+    {"key": "page_id", "value": "deepsolv"},
+    {"key": "industry", "value": "software"},
+    {"key": "name", "value": ""},
+    {"key": "min_followers", "value": "0"},
+    {"key": "max_followers", "value": "1000000"},
+    {"key": "page", "value": "1"},
+    {"key": "limit", "value": "10"},
+    {"key": "post_id", "value": ""}
+  ]
+}
